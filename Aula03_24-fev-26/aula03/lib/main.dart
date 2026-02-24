@@ -43,25 +43,27 @@ class _PaginaContadorState extends State<PaginaContador> {
         style: TextStyle(fontSize: 24.0))
       ),
 
-      floatingActionButton: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          FloatingActionButton(
-        onPressed: increment,
-        child: Icon(Icons.add),
-      ),
-
-          FloatingActionButton(
-        onPressed: decrement,
-        child: Icon(Icons.remove),
+      floatingActionButton: Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+      FloatingActionButton(
+      onPressed: increment,
+      child: Icon(Icons.add),
       ),
       
-          FloatingActionButton(
-        onPressed: reset,
-        child: Icon(Icons.refresh),
+      SizedBox(width: 10.0), // Espaçamento entre os botões
+      FloatingActionButton(
+      onPressed: decrement,
+      child: Icon(Icons.remove),
+        
+      ),
+      SizedBox(width: 10.0), // Espaçamento entre os botões
+      FloatingActionButton(
+      onPressed: reset,
+      child: Icon(Icons.refresh),
       ), // FloatingActionButton
       ], // Children      
-      ), // Column
+      ), // Row
     ); // Scaffold
   }
 
